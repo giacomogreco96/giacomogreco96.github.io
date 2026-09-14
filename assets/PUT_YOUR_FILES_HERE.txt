@@ -1,0 +1,5 @@
+Add here:
+  - profile.jpg   your photo (square-ish, 300px+)
+  - cv.pdf        your CV, matching the "Full CV (PDF)" button in the header
+
+Once added, you can delete this text file.
