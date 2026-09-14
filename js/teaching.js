@@ -12,7 +12,7 @@
      materials   : array of { label, url } — one button per Drive link,
                    e.g. lecture notes, exercise sheets, past exams
    ========================================================================== */
-const TEACHING = [
+/*const TEACHING = [
   {
     role: "Teaching Assistant",
     title: "Example course — replace with your real course title",
@@ -23,7 +23,18 @@ const TEACHING = [
       { label: "Exercise sheets (Drive)", url: "#" }
     ]
   }
+];*/
+
+
+const TEACHING = [
+  {
+    role: "Professore a contratto",
+    title: "Exercise sessions corso Matematica",
+    context: "CdL Scienze Biologiche Tor Vergata · A.Y. 2025/2026",
+    description: "30 hours"
+  }
 ];
+
 
 function renderTeaching(){
   const list = document.getElementById("teachingList");
