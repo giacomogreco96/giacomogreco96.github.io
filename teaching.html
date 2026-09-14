@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching — Giacomo Greco</title>
+<meta name="description" content="Teaching activities and course materials — Giacomo Greco.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="topbar__name" href="index.html">Giacomo Greco</a>
+    <nav class="topbar__nav" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#interests">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#theses">Theses</a>
+      <a href="teaching.html" aria-current="page">Teaching</a>
+    </nav>
+    <button class="topbar__toggle" id="navToggle" aria-expanded="false" aria-controls="topbar__nav-mobile" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="topbar__nav-mobile" id="topbar__nav-mobile" aria-label="Primary mobile">
+    <a href="index.html#about">About</a>
+    <a href="index.html#interests">Research</a>
+    <a href="index.html#publications">Publications</a>
+    <a href="index.html#theses">Theses</a>
+    <a href="teaching.html">Teaching</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero hero--simple">
+    <div class="hero__text">
+      <p class="hero__eyebrow">Mathematics · Probability Theory</p>
+      <h1>Teaching</h1>
+      <p class="hero__role">Courses and teaching materials — Giacomo Greco</p>
+    </div>
+  </section>
+
+  <section class="section" id="courses" style="border-top:none;">
+    <p class="section__hint">Each course links out to its materials (slides, exercise sheets, past exams…) hosted on Google Drive, exactly as on the previous site.</p>
+    <ol class="pub-list" id="teachingList"><!-- populated by js/teaching.js --></ol>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Giacomo Greco · Dipartimento di Matematica, Università degli Studi di Roma Tor Vergata</p>
+  <p>Email: <a href="mailto:greco@mat.uniroma2.it">greco@mat.uniroma2.it</a></p>
+  <p><a href="index.html">&larr; Back to homepage</a></p>
+</footer>
+
+<script src="js/teaching.js"></script>
+</body>
+</html>
