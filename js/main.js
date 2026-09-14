@@ -19,7 +19,7 @@ const PUBLICATIONS = [
     venue: "arXiv:2601.21535 (01/2026) — accepted in a special issue of <strong>Theory of Probability and Mathematical Statistics</strong>",
     journal: null,
     arxiv: "https://arxiv.org/abs/2601.21535",
-    abstract: "The paper proposes a simple representation for isotropic random fields on the sphere that makes several notions of sparsity tractable under the isotropy constraint. It shows that suitably built sparse fields can reproduce the angular power spectrum and higher-order polyspectra of common non-Gaussian fields while admitting computationally efficient simulation, and it constructs isotropy-preserving sparse approximations of spherical random fields, addressing an issue raised in the cosmology literature.",
+    abstract: "We introduce a simple representation for isotropic spherical random fields and we discuss how it allows to discuss different notions of sparsity under isotropy. We also show how a suitable construction of sparse fields can mimic well the angular power spectrum and the polyspectra of some popular non-Gaussian fields, at the same time allowing for computationally efficient simulation algorithms. Using related ideas we also show how it is possible to obtain sparse approximations of spherical random fields which preserve isotropy, thus addressing an issue which has been raised in the Cosmological literature.",
     bibtex:
 `@article{GrecoMarinucci2026sparsity,
   author  = {Greco, Giacomo and Marinucci, Domenico},
@@ -38,7 +38,7 @@ const PUBLICATIONS = [
     venue: "arXiv:2505.13189 (05/2025) — accepted in the INdAM-Springer volume <strong>Analysis and Geometry of Random Fields</strong>",
     journal: null,
     arxiv: "https://arxiv.org/abs/2505.13189",
-    abstract: "This paper recasts score-based diffusion generative models in an infinite-dimensional, abstract Hilbertian setting using Gamma and Malliavin calculi. The forward noising process is built from Dirichlet forms on the Cameron-Martin space of Gaussian measures and Wiener chaoses, and an abstract time-reversal formula is used to show that the score function is a Malliavin derivative corresponding to a conditional expectation. This extends existing finite-dimensional entropic convergence bounds to the Hilbertian setting and specializes the discussion to spherical random fields, in particular Whittle-Matérn fields.",
+    abstract: "We adopt a Gamma and Malliavin Calculi point of view in order to generalize Score-based diffusion Generative Models (SGMs) to an infinite-dimensional abstract Hilbertian setting. Particularly, we define the forward noising process using Dirichlet forms associated to the Cameron-Martin space of Gaussian measures and Wiener chaoses; whereas by relying on an abstract time-reversal formula, we show that the score function is a Malliavin derivative and it corresponds to a conditional expectation. This allows us to generalize SGMs to the infinite-dimensional setting. Moreover, we extend existing finite-dimensional entropic convergence bounds to this Hilbertian setting by highlighting the role played by the Cameron-Martin norm in the Fisher information of the data distribution. Lastly, we specify our discussion for spherical random fields, considering as source of noise a Whittle-Matérn random spherical field.",
     bibtex:
 `@incollection{Greco2025malliavin,
   author    = {Greco, Giacomo},
@@ -60,7 +60,7 @@ const PUBLICATIONS = [
     venue: "<strong>Bernoulli</strong> 32(3): 2351–2378 (August 2026)",
     journal: "https://doi.org/10.3150/25-BEJ1956",
     arxiv: "https://arxiv.org/abs/2504.11133",
-    abstract: "The paper establishes quantitative stability bounds for the Hessian of entropic optimal transport potentials in general, possibly unbounded settings — the first result of this kind at second order. The proof strategy relies on semiconcavity properties of entropic potentials and on the representation of entropic transport plans as laws of forward and backward diffusion processes (Schrödinger bridges). As a consequence, the authors deduce exponential convergence rates, with polynomial dependence on the regularization parameter, for the gradient and Hessian of Sinkhorn's iterates — a problem previously open in unbounded settings.",
+    abstract: "In this paper we determine quantitative stability bounds for the Hessian of entropic potentials, i.e., the dual solution to the entropic optimal transport problem. To the authors’ knowledge this is the first work addressing this second-order quantitative stability estimate in general unbounded settings. Our proof strategy relies on semiconcavity properties of entropic potentials and on the representation of entropic transport plans as laws of forward and backward diffusion processes, known as Schrödinger bridges. Moreover, our approach allows to deduce a stochastic proof of quantitative stability estimates for entropic transport plans and for gradients of entropic potentials as well. Finally, as a direct consequence of these stability bounds, we deduce exponential convergence rates for gradient and Hessian of Sinkhorn iterates along Sinkhorn’s algorithm, a problem that was still open in unbounded settings. Our rates have a polynomial dependence on the regularization parameter.",    
     bibtex:
 `@article{GrecoTamanini2026hessian,
   author  = {Greco, Giacomo and Tamanini, Luca},
@@ -80,7 +80,7 @@ const PUBLICATIONS = [
     venue: "arXiv:2412.09235 (12/2024) — accepted in <strong>Annals of Probability</strong>",
     journal: null,
     arxiv: "https://arxiv.org/abs/2412.09235",
-    abstract: "This paper studies stability of optimizers and convergence of Sinkhorn's algorithm for the entropic optimal transport problem. For the quadratic cost, the authors show that semiconcavity of one entropic potential controls the relative entropy between optimal plans by the squared Wasserstein distance between the marginals. Applied to Sinkhorn's algorithm, this yields exponential convergence without requiring a bounded ground cost, including new results for log-concave marginals at every regularization level, marginals with light tails, subspace elastic costs, Lipschitz costs with bounded Hessian, and compact Riemannian manifolds.",
+    abstract: "We study stability of optimizers and convergence of Sinkhorn's algorithm for the entropic optimal transport problem. In the special case of the quadratic cost, our stability bounds imply that if one of the two entropic potentials is semiconcave, then the relative entropy between optimal plans  is controlled by the squared Wasserstein distance between their marginals.  When employed in the analysis of Sinkhorn's algorithm, this result gives a natural sufficient condition for its exponential convergence, which does not require the ground cost to be bounded. By controlling from above the Hessians of Sinkhorn potentials in examples of interest, we obtain new exponential convergence results. For instance, for the first time we obtain exponential convergence for log-concave marginals and quadratic costs for all values of the regularization parameter, based on semiconcavity propagation results. Moreover, the convergence rate has a linear dependence on the regularization: this behavior is sharp and had only been previously  obtained for compact distributions  `Chizat et al. (2025)'.  These optimal rates are also established in situations where one of the two marginals does not have sub-Gaussian tails. Other interesting new applications include  subspace elastic costs, weakly log-concave marginals, smooth marginals with light tails (where, under reinforced assumptions, we manage to improve the dependence on the regularization in the exponential rates obtained in `Eckstein (2025)'), the case of Lipschitz costs with bounded Hessian, and compact Riemannian manifolds.",    
     bibtex:
 `@article{ChiariniConfortiGrecoTamanini2024semiconcavity,
   author  = {Chiarini, Alberto and Conforti, Giovanni and Greco, Giacomo and Tamanini, Luca},
@@ -100,7 +100,7 @@ const PUBLICATIONS = [
     venue: "arXiv:2304.04451 (04/2023) — accepted in <strong>Annals of Applied Probability</strong>",
     journal: null,
     arxiv: "https://arxiv.org/abs/2304.04451",
-    abstract: "The authors prove non-asymptotic exponential convergence of Sinkhorn's iterates to the Schrödinger potentials solving the quadratic entropic optimal transport problem on R^d. The result holds under mild assumptions — an asymptotically positive log-concavity profile on the marginals — covering log-concave distributions and bounded smooth perturbations of quadratic potentials as special cases, and gives some of the first exponential convergence guarantees for Sinkhorn's algorithm without assuming bounded costs or compactly supported marginals.",
+    abstract: "We show non-asymptotic exponential convergence of Sinkhorn iterates to the Schrödinger potentials, solutions of the quadratic Entropic Optimal Transport problem on $\\mathbb{R}^ d$.  Our results hold under mild assumptions on the marginal inputs: in particular, we only assume that they admit an asymptotically positive log-concavity profile, covering as special cases log-concave distributions and bounded smooth perturbations of quadratic potentials.  Up to the authors' knowledge, these are the first results which establish exponential convergence of Sinkhorn's algorithm in a general setting without assuming bounded cost functions or compactly supported marginals.",   
     bibtex:
 `@article{ConfortiDurmusGreco2023contraction,
   author  = {Conforti, Giovanni and Durmus, Alain and Greco, Giacomo},
@@ -120,7 +120,7 @@ const PUBLICATIONS = [
     venue: "Proceedings of the 36th Conference on Learning Theory (<strong>COLT 2023</strong>), PMLR 195:716–746",
     journal: "https://proceedings.mlr.press/v195/greco23a.html",
     arxiv: "https://arxiv.org/abs/2304.06549",
-    abstract: "Working with probability measures on the d-dimensional torus, the paper proves pointwise exponential convergence of Sinkhorn's iterates and of their gradients. The proof connects these iterates to the value functions of stochastic optimal control problems and their Hamilton-Jacobi-Bellman equations, and is purely probabilistic, relying on coupling-by-reflection techniques for controlled diffusions — a novel approach that the authors note could extend to the non-compact Euclidean setting.",
+    abstract: "Computational optimal transport (OT) has recently emerged as a powerful framework with applications in various fields. In this paper we focus on a relaxation of the original OT problem, the entropic OT problem, which allows to implement efficient and practical algorithmic solutions, even in high dimensional settings. This formulation, also known as the Schrödinger Bridge problem, notably connects with Stochastic Optimal Control (SOC) and can be solved with the popular Sinkhorn algorithm. In the case of discrete-state spaces, this algorithm is known to have exponential convergence; however, achieving a similar rate of convergence in a more general setting is still an active area of research. In this work, we analyze the convergence of the Sinkhorn algorithm for probability measures defined on the d-dimensional torus T, that admit densities with respect to the Haar measure of T. In particular, we prove pointwise exponential convergence of Sinkhorn iterates and their gradient. Our proof relies on the connection between these iterates and the evolution along the Hamilton-Jacobi-Bellman equations of value functions obtained from SOC-problems. Our approach is novel in that it is purely probabilistic and relies on coupling by reflection techniques for controlled diffusions on the torus.",
     bibtex:
 `@inproceedings{GrecoNobleConfortiDurmus2023colt,
   author    = {Greco, Giacomo and Noble, Maxence and Conforti, Giovanni and Durmus, Alain},
@@ -140,7 +140,7 @@ const PUBLICATIONS = [
     venue: "<strong>Communications in Partial Differential Equations</strong> 48(6): 895–943 (2023)",
     journal: "https://doi.org/10.1080/03605302.2023.2215527",
     arxiv: "https://arxiv.org/abs/2207.14262",
-    abstract: "The authors show that gradients of the Schrödinger potentials converge to the Brenier optimal transport map in the small-time limit, under general marginal assumptions that allow unbounded densities and supports. They also derive new quantitative stability estimates for the values and optimal couplings of the Schrödinger problem, expressed through a negative-order weighted homogeneous Sobolev norm that encodes the linearized behaviour of the 2-Wasserstein distance, with direct consequences for quadratic entropic optimal transport.",
+    abstract: "We show convergence of the gradients of the Schrödinger potentials to the (uniquely determined) gradient of Kantorovich potentials in the small-time limit under general assumptions on the marginals, which allow for unbounded densities and supports. Furthermore, we provide novel quantitative stability estimates for the optimal values and optimal couplings for the Schrödinger problem (SP), that we express in terms of a negative order weighted homogeneous Sobolev norm. The latter encodes the linearized behavior of the 2-Wasserstein distance between the marginals. The proofs of both results highlight for the first time the relevance of gradient bounds for Schrödinger potentials, that we establish here in full generality, in the analysis of the short-time behavior of Schrödinger bridges. Finally, we discuss how our results translate into the framework of quadratic Entropic Optimal Transport, that is a version of SP more suitable for applications in machine learning and data science.",  
     bibtex:
 `@article{ChiariniConfortiGrecoTamanini2023gradient,
   author  = {Chiarini, Alberto and Conforti, Giovanni and Greco, Giacomo and Tamanini, Luca},
@@ -160,7 +160,7 @@ const PUBLICATIONS = [
     venue: "<strong>Electronic Journal of Probability</strong> 27: 1–32 (2022)",
     journal: "https://projecteuclid.org/journals/electronic-journal-of-probability/volume-27/issue-none/Entropic-turnpike-estimates-for-the-kinetic-Schr%C3%B6dinger-problem/10.1214/22-EJP850.full?tab=ArticleLink",
     arxiv: "https://arxiv.org/abs/2108.09161",
-    abstract: "The paper studies the kinetic Schrödinger problem, in which Langevin dynamics replace Brownian motion in Schrödinger's original thought experiment, and proves turnpike-type estimates for the long-time behaviour of the associated entropic cost. The results build on recent advances for classical Schrödinger bridges together with a kinetic adaptation of the Bakry-Émery calculus, and are complemented by structural results such as a dual representation of the entropic cost and existence of Schrödinger potentials.",
+    abstract: "We investigate the kinetic Schrödinger problem, obtained considering Langevin dynamics instead of Brownian motion in Schrödinger’s thought experiment. Under a quasilinearity assumption we establish exponential entropic turnpike estimates for the corresponding Schrödinger bridges and exponentially fast convergence of the entropic cost to the sum of the marginal entropies in the long-time regime, which provides as a corollary an entropic Talagrand inequality. In order to do so, we benefit from recent advances in the understanding of classical Schrödinger bridges and adaptations of Bakry–Émery formalism to the kinetic setting. Our quantitative results are complemented by basic structural results such as dual representation of the entropic cost and the existence of Schrödinger potentials.",
     bibtex:
 `@article{ChiariniConfortiGrecoRen2022turnpike,
   author  = {Chiarini, Alberto and Conforti, Giovanni and Greco, Giacomo and Ren, Zhenjie},
@@ -261,6 +261,15 @@ function openModal(index, mode){
     modalKicker.textContent = "Abstract";
     modalBody.innerHTML = `<p>${pub.abstract}</p>`;
     modalCopy.hidden = true;
+    // Render any $...$ / $$...$$ LaTeX in the abstract via KaTeX, if loaded
+    if (window.renderMathInElement){
+      renderMathInElement(modalBody, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ]
+      });
+    }
   } else {
     modalKicker.textContent = "BibTeX";
     modalBody.innerHTML = `<pre id="bibtexText">${escapeHtml(pub.bibtex)}</pre>`;
