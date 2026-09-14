@@ -2,7 +2,7 @@
    Publication data
    -------------------------------------------------------------------------
    Edit this array to add, remove or correct publications. Each entry:
-     status   : "preprint" | "published"   (controls the small tag colour)
+     status   : "preprint" | "published"  (controls the small tag colour)
      authors  : string
      title    : string
      venue    : string (HTML allowed, e.g. "<strong>Bernoulli</strong> 32(3)...")
