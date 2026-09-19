@@ -2,7 +2,7 @@
    Publication data
    -------------------------------------------------------------------------
    Edit this array to add, remove or correct publications. Each entry:
-     status   : "preprint" | "published"  (controls the small tag colour)
+     status   : "preprint" | "accepted" | "published"  (controls the small tag colour)
      authors  : string
      title    : string
      venue    : string (HTML allowed, e.g. "<strong>Bernoulli</strong> 32(3)...")
@@ -13,7 +13,7 @@
    ========================================================================== */
 const PUBLICATIONS = [
   {
-    status: "preprint",
+    status: "accepted",
     authors: "G. Greco, D. Marinucci",
     title: "Sparsity for isotropic spherical random fields",
     venue: "arXiv:2601.21535 (01/2026) — accepted in a special issue of <strong>Theory of Probability and Mathematical Statistics</strong>",
@@ -32,7 +32,7 @@ const PUBLICATIONS = [
 }`
   },
   {
-    status: "preprint",
+    status: "accepted",
     authors: "G. Greco",
     title: "A Malliavin-Gamma calculus approach to Score Based Diffusion Generative models for random fields",
     venue: "arXiv:2505.13189 (05/2025) — accepted in the INdAM-Springer volume <strong>Analysis and Geometry of Random Fields</strong>",
@@ -74,7 +74,7 @@ const PUBLICATIONS = [
 }`
   },
   {
-    status: "preprint",
+    status: "accepted",
     authors: "A. Chiarini, G. Conforti, G. Greco, L. Tamanini",
     title: "A semiconcavity approach to stability of entropic plans and exponential convergence of Sinkhorn's algorithm",
     venue: "arXiv:2412.09235 (12/2024) — accepted in <strong>Annals of Probability</strong>",
@@ -94,7 +94,7 @@ const PUBLICATIONS = [
 }`
   },
   {
-    status: "preprint",
+    status: "accepted",
     authors: "G. Conforti, A. Durmus, G. Greco",
     title: "Quantitative contraction rates for Sinkhorn's algorithm: beyond bounded costs and compact marginals",
     venue: "arXiv:2304.04451 (04/2023) — accepted in <strong>Annals of Applied Probability</strong>",
@@ -185,9 +185,20 @@ function renderPublications(){
     const li = document.createElement("li");
     li.className = "pub";
 
+    const number = document.createElement("span");
+    number.className = "pub__number";
+    number.textContent = "[" + (PUBLICATIONS.length - i) + "]";
+    li.appendChild(number);
+
+    const STATUS_META = {
+      preprint:  { label: "Preprint",  cls: "pub__tag--preprint" },
+      accepted:  { label: "Accepted",  cls: "pub__tag--accepted" },
+      published: { label: "Published", cls: "pub__tag--published" }
+    };
+    const meta = STATUS_META[pub.status] || STATUS_META.preprint;
     const tag = document.createElement("span");
-    tag.className = "pub__tag " + (pub.status === "published" ? "pub__tag--published" : "pub__tag--preprint");
-    tag.textContent = pub.status === "published" ? "Published" : "Preprint";
+    tag.className = "pub__tag " + meta.cls;
+    tag.textContent = meta.label;
     li.appendChild(tag);
 
     const title = document.createElement("p");
