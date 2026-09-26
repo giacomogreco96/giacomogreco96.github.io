@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+  (function(){
+    var saved = localStorage.getItem('theme');
+    var theme = saved || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Giacomo Greco — Mathematics</title>
 <meta name="description" content="Giacomo Greco — PostDoc researcher in probability theory at University of Rome Tor Vergata. Random fields, optimal transport, Schrödinger bridges.">
@@ -31,6 +38,7 @@
       <a href="#theses">Theses</a>
       <a href="teaching.html">Teaching</a>
     </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">🌙</button>
     <button class="topbar__toggle" id="navToggle" aria-expanded="false" aria-controls="topbar__nav-mobile" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -168,7 +176,8 @@
 <footer class="footer">
   <p>Giacomo Greco · Dipartimento di Matematica, Università degli Studi di Roma Tor Vergata</p>
   <p>Email: <a href="mailto:greco@mat.uniroma2.it">greco@mat.uniroma2.it</a></p>
-  <p class="footer__updated">Page last updated: <span id="lastUpdated">September 2026</span></p>
+    <p class="footer__updated">Page last updated: <span id="lastUpdated">June 2026</span></p>
+  <p>© 2026 Giacomo Greco. All rights reserved. Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.</p>
 </footer>
 
 <!-- Pop-up used for both Abstract and BibTeX -->
@@ -182,6 +191,7 @@
   </div>
 </div>
 
+<script src="js/theme.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

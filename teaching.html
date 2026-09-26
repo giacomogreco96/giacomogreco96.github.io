@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+  (function(){
+    var saved = localStorage.getItem('theme');
+    var theme = saved || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Teaching — Giacomo Greco</title>
 <meta name="description" content="Teaching activities and course materials — Giacomo Greco.">
@@ -26,6 +33,7 @@
       <a href="index.html#theses">Theses</a>
       <a href="teaching.html" aria-current="page">Teaching</a>
     </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">🌙</button>
     <button class="topbar__toggle" id="navToggle" aria-expanded="false" aria-controls="topbar__nav-mobile" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -60,8 +68,11 @@
   <p>Giacomo Greco · Dipartimento di Matematica, Università degli Studi di Roma Tor Vergata</p>
   <p>Email: <a href="mailto:greco@mat.uniroma2.it">greco@mat.uniroma2.it</a></p>
   <p><a href="index.html">&larr; Back to homepage</a></p>
+  <p>© 2026 Giacomo Greco. All rights reserved. Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+</footer>
 </footer>
 
+<script src="js/theme.js"></script>
 <script src="js/teaching.js"></script>
 </body>
 </html>

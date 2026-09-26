@@ -12,6 +12,7 @@
   --tag-preprint: #B5772E;    /* warm ochre — used only for status tags */
   --tag-accepted: #2952A3;    /* blue — accepted, not yet published */
   --tag-published: #1F6F63;
+  --year-bg: rgba(28,33,39,0.07);   /* faded numeral behind each publication */
 
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans:  "IBM Plex Sans", -apple-system, Segoe UI, Roboto, sans-serif;
@@ -19,6 +20,21 @@
 
   --max-w: 760px;
 }
+
+html[data-theme="dark"]{
+  --paper:      #14171C;
+  --paper-dim:  #1D2127;
+  --ink:        #E9E7DF;
+  --ink-soft:   #A9AEB5;
+  --rule:       #2B303A;
+  --accent:     #4FBFAE;
+  --accent-ink: #0B1210;
+  --tag-preprint: #D89A54;
+  --tag-accepted: #2952A3; 
+  --tag-published: #4FBFAE;
+  --year-bg: rgba(255,255,255,0.06);
+}
+body{ transition: background-color .2s ease, color .2s ease; }
 
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
@@ -81,6 +97,13 @@ a:focus-visible, button:focus-visible{
   width: 34px; height: 34px; background: none; border: none; cursor: pointer;
 }
 .topbar__toggle span{ display:block; height: 2px; background: var(--ink); border-radius: 1px; }
+
+.theme-toggle{
+  background: none; border: none; cursor: pointer;
+  font-size: 1.05rem; line-height: 1; padding: 6px 8px;
+  border-radius: 4px; margin-left: 4px;
+}
+.theme-toggle:hover{ background: var(--paper-dim); }
 
 .topbar__nav-mobile{
   display: none; flex-direction: column;
@@ -203,8 +226,18 @@ h1{
    ========================================================================== */
 .pub-list{ list-style: none; margin: 0; padding: 0; counter-reset: pub; }
 .pub{
+  position: relative; overflow: hidden;
   padding: 22px 0; border-top: 1px solid var(--paper-dim);
 }
+.pub__year-bg{
+  position: absolute; z-index: -1;
+  top: 50%; right: 4px; transform: translateY(-50%);
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1; letter-spacing: -0.02em;
+  color: var(--year-bg); user-select: none;
+}
+@media (max-width: 640px){ .pub__year-bg{ display: none; } }
 .pub:first-child{ border-top: none; padding-top: 0; }
 
 .pub__tag{
