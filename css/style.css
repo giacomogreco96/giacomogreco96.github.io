@@ -12,7 +12,7 @@
   --tag-preprint: #B5772E;    /* warm ochre — used only for status tags */
   --tag-accepted: #2952A3;    /* blue — accepted, not yet published */
   --tag-published: #1F6F63;
-  --year-bg: rgba(28,33,39,0.07);   /* faded numeral behind each publication */
+  --topbar-bg: rgba(247,245,239,0.92);
 
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans:  "IBM Plex Sans", -apple-system, Segoe UI, Roboto, sans-serif;
@@ -32,7 +32,7 @@ html[data-theme="dark"]{
   --tag-preprint: #D89A54;
   --tag-accepted: #2952A3; 
   --tag-published: #4FBFAE;
-  --year-bg: rgba(255,255,255,0.06);
+  --topbar-bg: rgba(20,23,28,0.85);
 }
 body{ transition: background-color .2s ease, color .2s ease; }
 
@@ -72,7 +72,7 @@ a:focus-visible, button:focus-visible{
    ========================================================================== */
 .topbar{
   position: sticky; top: 0; z-index: 100;
-  background: rgba(247,245,239,0.92);
+  background: var(--topbar-bg);
   backdrop-filter: saturate(140%) blur(6px);
   border-bottom: 1px solid var(--rule);
 }
@@ -100,10 +100,13 @@ a:focus-visible, button:focus-visible{
 
 .theme-toggle{
   background: none; border: none; cursor: pointer;
-  font-size: 1.05rem; line-height: 1; padding: 6px 8px;
-  border-radius: 4px; margin-left: 4px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--ink); padding: 6px; border-radius: 4px; margin-left: 4px;
 }
 .theme-toggle:hover{ background: var(--paper-dim); }
+.theme-toggle__icon--moon{ display: none; }
+html[data-theme="dark"] .theme-toggle__icon--sun{ display: none; }
+html[data-theme="dark"] .theme-toggle__icon--moon{ display: inline; }
 
 .topbar__nav-mobile{
   display: none; flex-direction: column;
@@ -229,15 +232,7 @@ h1{
   position: relative; overflow: hidden;
   padding: 22px 0; border-top: 1px solid var(--paper-dim);
 }
-.pub__year-bg{
-  position: absolute; z-index: -1;
-  top: 50%; right: 4px; transform: translateY(-50%);
-  font-family: var(--serif); font-weight: 700;
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  line-height: 1; letter-spacing: -0.02em;
-  color: var(--year-bg); user-select: none;
-}
-@media (max-width: 640px){ .pub__year-bg{ display: none; } }
+
 .pub:first-child{ border-top: none; padding-top: 0; }
 
 .pub__tag{

@@ -16,7 +16,6 @@ const PUBLICATIONS = [
     status: "accepted",
     authors: "G. Greco, D. Marinucci",
     title: "Sparsity for isotropic spherical random fields",
-    year: "2026",
     venue: "arXiv:2601.21535 (01/2026) — accepted in a special issue of <strong>Theory of Probability and Mathematical Statistics</strong>",
     journal: null,
     arxiv: "https://arxiv.org/abs/2601.21535",
@@ -36,7 +35,6 @@ const PUBLICATIONS = [
     status: "accepted",
     authors: "G. Greco",
     title: "A Malliavin-Gamma calculus approach to Score Based Diffusion Generative models for random fields",
-    year: "2025",
     venue: "arXiv:2505.13189 (05/2025) — accepted in the INdAM-Springer volume <strong>Analysis and Geometry of Random Fields</strong>",
     journal: null,
     arxiv: "https://arxiv.org/abs/2505.13189",
@@ -48,7 +46,6 @@ const PUBLICATIONS = [
   booktitle = {Analysis and Geometry of Random Fields},
   series    = {INdAM Series},
   publisher = {Springer},
-  year      = {2025},
   note      = {To appear},
   eprint    = {2505.13189},
   archivePrefix = {arXiv},
@@ -59,7 +56,6 @@ const PUBLICATIONS = [
     status: "published",
     authors: "G. Greco, L. Tamanini",
     title: "Hessian stability and convergence rates for entropic and Sinkhorn potentials via semiconcavity",
-    year:"2025",
     venue: "<strong>Bernoulli</strong> 32(3): 2351–2378 (August 2026)",
     journal: "https://doi.org/10.3150/25-BEJ1956",
     arxiv: "https://arxiv.org/abs/2504.11133",
@@ -80,7 +76,6 @@ const PUBLICATIONS = [
     status: "accepted",
     authors: "A. Chiarini, G. Conforti, G. Greco, L. Tamanini",
     title: "A semiconcavity approach to stability of entropic plans and exponential convergence of Sinkhorn's algorithm",
-    year: "2024",
     venue: "arXiv:2412.09235 (12/2024) — accepted in <strong>Annals of Probability</strong>",
     journal: null,
     arxiv: "https://arxiv.org/abs/2412.09235",
@@ -101,7 +96,6 @@ const PUBLICATIONS = [
     status: "accepted",
     authors: "G. Conforti, A. Durmus, G. Greco",
     title: "Quantitative contraction rates for Sinkhorn's algorithm: beyond bounded costs and compact marginals",
-    year: "2023",
     venue: "arXiv:2304.04451 (04/2023) — accepted in <strong>Annals of Applied Probability</strong>",
     journal: null,
     arxiv: "https://arxiv.org/abs/2304.04451",
@@ -122,7 +116,6 @@ const PUBLICATIONS = [
     status: "published",
     authors: "G. Greco, M. Noble, G. Conforti, A. Durmus",
     title: "Non-asymptotic convergence bounds for Sinkhorn iterates and their gradients: a coupling approach",
-    year: "2023",
     venue: "Proceedings of the 36th Conference on Learning Theory (<strong>COLT 2023</strong>), PMLR 195:716–746",
     journal: "https://proceedings.mlr.press/v195/greco23a.html",
     arxiv: "https://arxiv.org/abs/2304.06549",
@@ -143,7 +136,6 @@ const PUBLICATIONS = [
     status: "published",
     authors: "A. Chiarini, G. Conforti, G. Greco, L. Tamanini",
     title: "Gradient estimates for the Schrödinger potentials: convergence to the Brenier map and quantitative stability",
-    year: "2022",
     venue: "<strong>Communications in Partial Differential Equations</strong> 48(6): 895–943 (2023)",
     journal: "https://doi.org/10.1080/03605302.2023.2215527",
     arxiv: "https://arxiv.org/abs/2207.14262",
@@ -164,7 +156,6 @@ const PUBLICATIONS = [
     status: "published",
     authors: "A. Chiarini, G. Conforti, G. Greco, Z. Ren",
     title: "Entropic turnpike estimates for the kinetic Schrödinger problem",
-    year: "2021",
     venue: "<strong>Electronic Journal of Probability</strong> 27: 1–32 (2022)",
     journal: "https://projecteuclid.org/journals/electronic-journal-of-probability/volume-27/issue-none/Entropic-turnpike-estimates-for-the-kinetic-Schr%C3%B6dinger-problem/10.1214/22-EJP850.full?tab=ArticleLink",
     arxiv: "https://arxiv.org/abs/2108.09161",
@@ -192,12 +183,6 @@ function renderPublications(){
   PUBLICATIONS.forEach((pub, i) => {
     const li = document.createElement("li");
     li.className = "pub";
-
-    const yearBg = document.createElement("span");
-    yearBg.className = "pub__year-bg";
-    yearBg.textContent = pub.year;
-    yearBg.setAttribute("aria-hidden", "true");
-    li.appendChild(yearBg);
 
     const number = document.createElement("span");
     number.className = "pub__number";
