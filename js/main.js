@@ -12,6 +12,25 @@
      bibtex   : BibTeX entry shown (and copyable) in the pop-up
    ========================================================================== */
 const PUBLICATIONS = [
+    {
+    status: "preprint",
+    year: "2026",
+    authors: "G. Greco",      
+    title: "Emergence of the transformer architecture as the score of entropic laws of random measures",           
+    venue: "arXiv:2610.39614 (10/2026)",
+    journal: null,
+    arxiv: "https://arxiv.org/abs/2610.39614",
+    abstract: "We show that the transformer architecture emerges as the score of last-token laws in a natural statistical model of language, where sentences are empirical measures of tokens, a language is a law on $\\mathcal{P}(\\mathcal{S}^d)$, and our prior belief is that sentences carry no structure at all. By the maximum-entropy principle, we select the law closest to this prior in relative entropy among those reproducing an observed sentence-level statistic. We discuss the relevance of the statistic in the posterior interaction between tokens and we build a statistic, able to capture that interaction, with Luce's choice axiom truncated at the lowest relational order. This procedure gives the softmax choice rule, with the attention cross-moment as its mean parameter. The query--key matrix is then the Lagrange multiplier of a maximum-entropy problem inside each sentence, and the value matrix the multiplier of the constraint over the language, so that the two are untied. Under the optimal entropic law we then show that a transformer head appears in the score of the last-token law. For ordered sentences, causal masking follows from the masked reference choice rule, and with a next-token cross-moment the score equals one causally masked attention head. We also discuss multi-head attention, weight-tied unembedding, and a heuristic reading of residual blocks as projected Langevin steps.",
+    bibtex:
+`@article{Greco2026emergence,
+  author  = {Greco, Giacomo},
+  title   = {Emergence of the transformer architecture as the score of entropic laws of random measures},
+  year    = {2026},
+  eprint  = {2610.39614},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI}
+}`
+  },
   {
     status: "accepted",
     authors: "G. Greco, D. Marinucci",
